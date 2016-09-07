@@ -1,5 +1,5 @@
 # Overview
-Provides a thin API over MongoDB for a database of document resources, adding Json Schema validation. Like [Mongoose](http://mongoosejs.com/index.html) for PHP, but less mature, and using JSON Schema for validation. Only supports MongoDB, and is MongoDB centric. Not bothered trying to support alternate backends.
+Provides a thin API over MongoDB for a database of document resources, adding JSON Schema validation. Like [Mongoose](http://mongoosejs.com/index.html) for PHP, but less mature, and using JSON Schema for validation. Only supports MongoDB, and is MongoDB centric. Not bothered trying to support alternate backends.
 
 Note that while MongoDB does have validation that can be arbitrarily complex:
 
@@ -47,7 +47,7 @@ Notes:
 
   - If you try to create or update a document tha is invalid a `Models\Exception\ValidationFailedException` will be thrown.
   - `Models` requires the schema you load have a basic shape:
-      const MODEL_META_JSON_SCHEMA = '{
+      {
         "type": "object",
         "properties": {
           "create" : {"type": "object"},
@@ -56,7 +56,7 @@ Notes:
           "name":    {"type": "string", "minLength": 1}
         },
         "required": ["create", "update", "name"]
-      }'
+      }
   - Validation is split into validation for creation and for updates. This is because they are commonly different and it may be impossible to specify the correct constraints in a common schema. If create and update share a schema or large parts of, you can use refs.
   - JSON Schema refs to external documents will load, if they are valid local resources. You can control the loading of JSON Schema refs by constructing and passing the `PhpJsonSchema\JsonDocs` loader to Models.
   - `Models` requires *all* instace of *any* model have a basic shape. That is, there is actually two schema that both must validate; Your schema and `Models` basic instance schema. This schema just requires there is *always* an `_id` on update, and *never* an `_id` on create.
@@ -65,4 +65,4 @@ Notes:
 See [docs/class-structure-overview.md](class-structure-overview.md). For a description of the classes in this library.
 
 # Json Schema
-This lib uses [PhpJsonSchema](https://github.com/sam-at-github/PhpJsonSchema) for validation. You can reference other models via use of hyper links, and `$ref`. This only only likely going to work by default if you load you JSON Schema from file, and your `$ref`s resovle to other valid local files.
+This lib uses [PhpJsonSchema](https://github.com/sam-at-github/PhpJsonSchema) for validation. You can reference other models via use of hyper links, and `$ref`. This is only going to work by default if you load you JSON Schema from file, and your `$ref`s resolve to other valid local files.
