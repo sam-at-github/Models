@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+     "comment": "valid",
+     "firstName": "John",
+     "lastName": "Doe",
+     "email": "john.doe@nowhere.com"
+    },
+    {
+     "comment": "valid",
+     "firstName": "Mary",
+     "lastName": "Jane",
+     "email": "mj@nowhere.com"
+    },
+    {
+     "comment": "valid",
+     "firstName": "Jimmy",
+     "lastName": "Jane",
+     "email": "jj@nowhere.com"
+    },
+    {
+     "comment": "invalid due to key being set on create",
+     "firstName": "Jane",
+     "lastName": "Doe",
+     "email": "john.doe@nowhere.com",
+     "_id": 1
+    },
+    {
+     "comment": "invalid",
+     "firstName": "John",
+     "lastName": "Doe",
+     "email": "john.doe.nowhere.com"
+    },
+    {
+     "comment": "invalid",
+     "firstName": "J",
+     "lastName": "Doe",
+     "email": "john.doe@nowhere.com"
+    },
+    {
+     "comment": "invalid",
+     "firstName": "John",
+     "email": "john.doe@nowhere.com"
+    },
+    {
+     "comment": "invalid",
+     "firstName": "John",
+     "lastName": "Doe"
+    }
+  ]
+}

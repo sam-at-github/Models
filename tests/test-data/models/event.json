@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "name": "event",
+  "create": {
+    "properties": {
+      "time": { "type": "integer", "minimum": 0 },
+      "duration": { "type": "integer", "minimum": 0 },
+      "description": { "type": "string", "maxLength": 1023 },
+      "_id" : {
+        "type": "integer",
+        "minimum": 0,
+        "exclusiveMinimum": true
+      }
+    },
+    "required": ["time", "duration", "description"]
+  },
+  "update": { "$ref": "#/create" }
+}

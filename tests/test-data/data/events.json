@@ -1,0 +1,14 @@
+{
+  "events": [
+    {
+      "time": 1473142968,
+      "duration": 0,
+      "description": "I generated an event"
+    },
+    {
+      "time": 1473142976,
+      "duration": 1,
+      "description": "I generated another event"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "name": "user",
+  "definitions" : {
+    "firstName": { "type": "string", "minLength": 2 },
+    "lastName": { "type": "string", "minLength": 2 },
+    "email": { "type": "string", "format": "email" },
+    "comment": { "type": "string" }
+  },
+  "create": {
+    "title": "Data definition for creating user objects.",
+    "comment": "For creation we don't need an _id.",
+    "properties": {
+      "firstName": { "$ref": "#/definitions/firstName" },
+      "lastName": { "$ref": "#/definitions/lastName" },
+      "email": { "$ref": "#/definitions/email" },
+      "comment": { "$ref": "#/definitions/comment" }
+    },
+    "additionalProperties": false,
+    "required": ["firstName", "lastName", "email"]
+  },
+  "update": {
+    "title": "Data definition for updating user objects.",
+    "properties": {
+      "firstName": { "$ref": "#/definitions/firstName" },
+      "lastName": { "$ref": "#/definitions/lastName" },
+      "email": { "$ref": "#/definitions/email" },
+      "comment": { "$ref": "#/definitions/comment" },
+      "_id": {}
+    },
+    "additionalProperties": false,
+    "minProperties": 1
+  }
+}

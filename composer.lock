@@ -1,0 +1,70 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "a6d1948d80623768f9a16d564c277b8d",
+    "content-hash": "f32a1683cd28526b9731e116c9b68fd2",
+    "packages": [
+        {
+            "name": "sam-at-github/phpjsonschema",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sam-at-github/PhpJsonSchema.git",
+                "reference": "b02353b2ad5c7c0906591bb9eb4c104cf34f1de9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sam-at-github/PhpJsonSchema/zipball/b02353b2ad5c7c0906591bb9eb4c104cf34f1de9",
+                "reference": "b02353b2ad5c7c0906591bb9eb4c104cf34f1de9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "ext-xdebug": "*",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "",
+                    "JsonDocs\\": "JsonDocs"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "phpunit --configuration=./tests/phpunit.xml tests/"
+                ],
+                "coverage": [
+                    "phpunit --coverage-text --coverage-clover=coverage.clover --configuration=./tests/phpunit.xml tests/"
+                ],
+                "cs": [
+                    "phpcs --standard=psr2 ."
+                ]
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "description": "A PHP JSON Schema validator",
+            "support": {
+                "source": "https://github.com/sam-at-github/PhpJsonSchema/tree/master",
+                "issues": "https://github.com/sam-at-github/PhpJsonSchema/issues"
+            },
+            "time": "2016-09-06 06:10:13"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "sam-at-github/phpjsonschema": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
